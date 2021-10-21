@@ -18,7 +18,7 @@ export default async function Validate(req, res) {
 
                     return res.json({ SuccessMsg: "Valid Email 📬", statusCode: res.statusCode, result: validMailbox })
 
-                } else if (validMailbox !== null && validMailbox !== false) {
+                } else if (validMailbox !== false) {
 
                     return res.json({ SuccessMsg: "Valid Email 📬", statusCode: res.statusCode, result: validMailbox })
 
