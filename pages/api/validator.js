@@ -18,12 +18,12 @@ export default async function Validate(req, res) {
 
                     return res.json({ SuccessMsg: "Valid Email 📬", statusCode: res.statusCode, result: validMailbox })
 
-                } else if (validMailbox !== null && validMailbox !== false) {
+                } else if ( validMailbox !== false) {
 
                     return res.json({ SuccessMsg: "Valid Email 📬", statusCode: res.statusCode, result: validMailbox })
 
                 } else {
-                    return res.json({ ErrorMsg: "Invalid Email 🚫", result: validMailbox })
+                    return res.json({ ErrorMsg: "Invalid Email 🚫", result: [validMailbox, result] })
                 }
             } else {
                 return res.json({ ErrorMsg: "Invalid Email Domain 🚫" })
